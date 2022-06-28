@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2022_06_22_134757) do
 
-  create_table "urls", force: :cascade do |t|
+  create_table "urls", charset: "utf8mb3", force: :cascade do |t|
     t.string "original_url"
     t.string "short_url"
     t.datetime "created_at", precision: 6, null: false
