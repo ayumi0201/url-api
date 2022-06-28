@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  post '/register-url', to: 'urls#register_url'
+  get '/urls', to: 'urls#original_url_list'
+  get '/:short_url', to: 'urls#original_url'
 end
