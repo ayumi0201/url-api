@@ -2,7 +2,6 @@ class UrlsController < ApplicationController
   require 'securerandom'
 
   def register_url
-    binding.irb
 
     @original_url = Url.new(original_url: params["original_url"], short_url: SecureRandom.alphanumeric(5))
     if @original_url.save
